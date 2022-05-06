@@ -38,15 +38,15 @@ public class ProductManagerTest {
 
     @Test
     public void addProduct() {
-        ProductManager repo = new ProductManager();
-        repo.add(first);
-        repo.add(second);
-        repo.add(third);
-        repo.add(forth);
+        ProductManager manager = new ProductManager();
+        manager.add(first);
+        manager.add(second);
+        manager.add(third);
+        manager.add(forth);
 
 
         Product[] expected = {second};
-        Product[] actual = repo.searchBy("book2");
+        Product[] actual = manager.searchBy("book2");
 
         assertArrayEquals(expected, actual);
     }
