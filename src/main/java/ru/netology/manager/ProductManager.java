@@ -21,6 +21,14 @@ public class ProductManager {
         products = tmp;
     }
 
+    public Product[] getProducts() {
+        return products;
+    }
+
+    public void setProducts(Product[] products) {
+        this.products = products;
+    }
+
     public Product[] findAll() { return products;}
     public Product[] searchBy(String text) {
             Product[] result = new Product[0]; // тут будем хранить подошедшие запросу продукты
