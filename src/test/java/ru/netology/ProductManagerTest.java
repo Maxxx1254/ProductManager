@@ -6,8 +6,7 @@ import ru.netology.domein.Product;
 import ru.netology.domein.Smartphone;
 import ru.netology.manager.ProductManager;
 import ru.netology.repositiry.ProductRepository;
-
-import static org.junit.jupiter.api.Assertions.*;
+import static org.junit.jupiter.api.Assertions.assertArrayEquals;
 
 public class ProductManagerTest {
     Product first = new Book(1, "book1", 560, "author1");
