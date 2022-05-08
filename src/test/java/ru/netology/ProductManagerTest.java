@@ -16,7 +16,7 @@ public class ProductManagerTest {
 
 
     @Test
-    public void saveAndRemoveProduct() {
+    public void saveAndRemoveProductById() {
         ProductRepository repo = new ProductRepository();
 
         repo.save(first);
@@ -36,7 +36,7 @@ public class ProductManagerTest {
     }
 
     @Test
-    public void addProduct() {
+    public void addAndSearchProductByWord() {
         ProductManager manager = new ProductManager();
         manager.add(first);
         manager.add(second);
@@ -48,5 +48,16 @@ public class ProductManagerTest {
         Product[] actual = manager.searchBy("book2");
 
         assertArrayEquals(expected, actual);
+    }
+
+    @Test
+    public void testChallengeException() {
+        ProductRepository repository = new ProductRepository();
+        repository.save(first);
+        repository.save(second);
+        repository.save(third);
+        repository.save(forth);
+
+        repository.removeById(13);
     }
 }
