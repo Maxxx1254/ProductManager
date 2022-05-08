@@ -18,18 +18,16 @@ public class ProductRepository {
         return products;
     }
 
-    public Product findById(int id) {
-        int length = products.length;
-        Product[] tmp = new Product[length];
-        int index = 0;
-        for (Product product : products) {
-            if (product.getId() != id) {
-                tmp[index] = product;
-                index++;
+    public Product[] findById(int id) {
+        Product[] tmp = new Product[products.length];
+        for (int i = 0; i < products.length + 1; i++) {
+            if (i == id) {
+                return products;
             }
         }
         return null;
-    }
+        }
+
 
     public void removeById(int id) {
         if (findById(id) == null) {
