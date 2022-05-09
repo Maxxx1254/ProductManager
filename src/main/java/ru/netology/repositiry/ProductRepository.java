@@ -44,4 +44,8 @@ public class ProductRepository {
             products = tmp;
         }
     }
+
+    public void removeAll(){
+        this.products = new Product[0];
+    }
 }

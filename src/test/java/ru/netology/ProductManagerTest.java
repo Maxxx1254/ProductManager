@@ -1,11 +1,12 @@
 package ru.netology;
 
-import org.junit.jupiter.api.Test;
+import org.testng.annotations.Test;
 import ru.netology.domein.Book;
 import ru.netology.domein.Product;
 import ru.netology.domein.Smartphone;
 import ru.netology.manager.ProductManager;
 import ru.netology.repositiry.ProductRepository;
+
 import static org.junit.jupiter.api.Assertions.assertArrayEquals;
 
 public class ProductManagerTest {
@@ -60,4 +61,5 @@ public class ProductManagerTest {
 
         repository.removeById(13);
     }
+
 }

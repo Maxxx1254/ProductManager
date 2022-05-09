@@ -19,12 +19,14 @@ public class ProductManager {
      }
 
 
-    public void add(Product product) {
+    public Product[] add(Product product) {
+
         Product[] tmp = new  Product[products.length + 1];
         System.arraycopy(products, 0, tmp, 0, products.length);
         tmp[tmp.length - 1] = product;
         products = tmp;
         repository.save(product);
+        return products;
     }
 
     public Product[] searchBy(String text) {
