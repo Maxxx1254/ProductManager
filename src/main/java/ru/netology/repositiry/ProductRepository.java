@@ -5,7 +5,7 @@ import ru.netology.domein.Product;
 public class ProductRepository {
     private Product[] products = new Product[0];
 
-    public void save(Product product) {
+    public void saveProduct(Product product) {
         int length = products.length + 1;
         Product[] tmp = new Product[length];
         System.arraycopy(products, 0, tmp, 0, products.length);
@@ -26,12 +26,11 @@ public class ProductRepository {
             }
         }
         return null;
-        }
+    }
 
-
-    public void removeById(int id) {
+    public String removeById(int id) {
         if (findById(id) == null) {
-            throw new RuntimeException("Element with id: " + id + " not found. ");
+            throw new NotFoundException("Element with id " + id + " not found.");
         }
         int length = products.length - 1;
         Product[] tmp = new Product[length];
@@ -43,6 +42,7 @@ public class ProductRepository {
             }
             products = tmp;
         }
+        return null;
     }
 
     public void removeAll(){

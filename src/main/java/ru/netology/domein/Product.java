@@ -13,26 +13,6 @@ public class Product {
         this.prices = prices;
     }
 
-    public Product(int id) {
-        this.id = id;
-    }
-
-    public int getPrices() {
-        return prices;
-    }
-
-    public void setPrices(int prices) {
-        this.prices = prices;
-    }
-
-    public void setNames(String names) {
-        this.names = names;
-    }
-
-    public void setId(int id) {
-        this.id = id;
-    }
-
     public int getId() {
         return id;
     }

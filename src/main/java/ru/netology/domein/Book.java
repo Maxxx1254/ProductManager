@@ -8,12 +8,4 @@ public class Book extends Product{
         super(id, names, prices);
         this.authors = authors;
     }
-
-    public String getAuthors() {
-        return authors;
-    }
-
-    public void setAuthors(String authors) {
-        this.authors = authors;
-    }
 }
